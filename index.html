@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WPlay IPTV - Futuro da Transmissão Digital</title>
+    <title>WPlay IPTV - A Melhor TV por Internet do Brasil</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -67,6 +67,7 @@
         
         .channel-icon {
             transition: all 0.3s ease;
+            cursor: pointer;
         }
         
         .channel-icon:hover {
@@ -158,10 +159,67 @@
             color: #ff00ff;
             font-weight: bold;
         }
+        
+        .device-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #00ffff;
+            transition: all 0.3s ease;
+        }
+        
+        .device-item:hover {
+            background: rgba(0, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .info-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff00ff;
+            margin-bottom: 30px;
+        }
+        
+        .urgency-banner {
+            background: linear-gradient(90deg, #ff0000, #ff4500);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            animation: urgency-pulse 2s infinite;
+        }
+        
+        @keyframes urgency-pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            border-left: 4px solid #00ffff;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0,255,255,0.1), rgba(255,0,255,0.1));
+            border: 1px solid #00ffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     <div class="matrix-bg"></div>
+    
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        ⚡ PROMOÇÃO RELÂMPAGO! 50% DE DESCONTO PARA OS PRÓXIMOS 20 CLIENTES! ⚡
+    </div>
     
     <!-- Header -->
     <header class="gradient-bg sticky top-0 z-50">
@@ -176,7 +234,8 @@
             <div class="hidden md:flex space-x-6">
                 <a href="#planos" class="text-gray-300 hover:text-cyan-400 transition duration-300 futuristic-font">Planos</a>
                 <a href="#canais" class="text-gray-300 hover:text-cyan-400 transition duration-300 futuristic-font">Canais</a>
-                <a href="#contato" class="text-gray-300 hover:text-cyan-400 transition duration-300 futuristic-font">Contato</a>
+                <a href="#dispositivos" class="text-gray-300 hover:text-cyan-400 transition duration-300 futuristic-font">Dispositivos</a>
+                <a href="#contato" class="text-gray-300 hover:text-cyan-400 transition duration-300 futuristic-font">Suporte</a>
             </div>
             
             <button class="md:hidden text-cyan-400 text-2xl">
@@ -190,101 +249,301 @@
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="container mx-auto px-4 py-20 md:py-32 relative z-10 text-center">
             <h2 class="futuristic-font text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 glow-text">
-                O FUTURO DA TV DIGITAL
+                TV DIGITAL QUE VOCÊ MERECE
             </h2>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Acesso ilimitado a milhares de canais em alta qualidade com a tecnologia mais avançada do mercado.
+                Assista a <span class="text-cyan-400 font-bold">10.000+ canais</span> e <span class="text-purple-400 font-bold">50.000+ filmes/séries</span> em qualidade Full HD/4K por menos de R$1 por dia!
             </p>
+            
+            <div class="highlight-box max-w-2xl mx-auto mb-8">
+                <div class="flex items-center justify-center space-x-4">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-cyan-400">10.000+</div>
+                        <div class="text-sm">CANAIS</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-400">50.000+</div>
+                        <div class="text-sm">FILMES/SÉRIES</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-400">24/7</div>
+                        <div class="text-sm">SUPORTE</div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#planos" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 glow-box">
-                    ASSINE JÁ
+                <a href="#planos" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 glow-box text-xl">
+                    <i class="fas fa-bolt mr-2"></i> ASSINAR AGORA
                 </a>
-                <a href="#contato" class="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-                    FALE CONOSCO
+                <a href="https://wa.me/5564999984690" class="border-2 border-green-500 bg-green-900 bg-opacity-30 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 text-xl">
+                    <i class="fab fa-whatsapp mr-2"></i> TIRAR DÚVIDAS
                 </a>
+            </div>
+            
+            <div class="mt-8 flex items-center justify-center space-x-4">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                    <span>Sem fidelidade</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                    <span>Instalação em 5 minutos</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                    <span>Teste grátis disponível</span>
+                </div>
             </div>
         </div>
         
         <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-10"></div>
     </section>
     
+    <!-- O que é IPTV Section -->
+    <section class="py-16 bg-black bg-opacity-70">
+        <div class="container mx-auto px-4">
+            <div class="info-box">
+                <h2 class="futuristic-font text-3xl md:text-4xl font-bold mb-6 text-cyan-400 glow-text">
+                    POR QUE <span class="text-purple-400">ESCOLHER</span> NOSSO IPTV?
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-cyan-400 mb-4 flex items-center">
+                            <i class="fas fa-trophy mr-3"></i> A MELHOR EXPERIÊNCIA
+                        </h3>
+                        <p class="mb-4">
+                            Nossa tecnologia exclusiva garante a melhor qualidade de streaming com ZERO buffering, mesmo durante os jogos mais importantes.
+                        </p>
+                        <p>
+                            Servidores premium com redundância garantem 99,9% de uptime - você nunca perde seu programa favorito.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-purple-400 mb-4 flex items-center">
+                            <i class="fas fa-money-bill-wave mr-3"></i> ECONOMIA EXTREMA
+                        </h3>
+                        <p class="mb-4">
+                            Pague até <span class="font-bold text-green-400">70% menos</span> que as operadoras tradicionais e tenha acesso a MUITO mais conteúdo.
+                        </p>
+                        <p>
+                            Sem taxas extras, sem fidelidade, sem surpresas na fatura. Assinatura simples e transparente.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-gray-900 p-4 rounded-lg border-l-4 border-cyan-400">
+                        <div class="text-cyan-400 text-2xl mb-2">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">ATIVAÇÃO IMEDIATA</h4>
+                        <p class="text-sm">Seu acesso é liberado em menos de 5 minutos após a confirmação do pagamento.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg border-l-4 border-purple-400">
+                        <div class="text-purple-400 text-2xl mb-2">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">SUPORTE 24/7</h4>
+                        <p class="text-sm">Equipe especializada disponível a qualquer hora para resolver seus problemas.</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg border-l-4 border-green-400">
+                        <div class="text-green-400 text-2xl mb-2">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">MULTIDISPOSITIVOS</h4>
+                        <p class="text-sm">Assista em qualquer lugar: TV, celular, tablet ou computador.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Planos Section -->
     <section id="planos" class="py-16 bg-black bg-opacity-70">
         <div class="container mx-auto px-4">
             <h2 class="futuristic-font text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400 glow-text">
-                NOSSOS <span class="text-purple-400">PLANOS</span>
+                ESCOLHA SEU <span class="text-purple-400">PLANO</span>
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Plano 1 -->
-                <div class="bg-gray-900 rounded-xl p-8 neon-border transform hover:scale-105 transition duration-500">
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="futuristic-font text-2xl font-bold text-cyan-400">PLANO BÁSICO</h3>
-                        <span class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">1 APARELHO</span>
-                    </div>
-                    <div class="mb-6">
-                        <span class="text-5xl font-bold text-white">R$ 25,00</span>
-                        <span class="text-gray-400">/mês</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                            <span>+10.000 Canais</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                            <span>+50.000 Filmes e Séries</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                            <span>Qualidade Full HD/4K</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                            <span>Suporte 24/7</span>
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/5564999984690?text=Olá,%20tenho%20interesse%20em%20adquirir%20o%20Plano%20Básico%20da%20WPlay%20IPTV%20(1%20aparelho)%20por%20R$25,00/mês" class="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-bold py-3 px-4 rounded-full transition duration-300 hover:opacity-90 glow-box pulse block text-center">
-                        COMPRAR AGORA
-                    </a>
+            <div class="max-w-5xl mx-auto">
+                <div class="urgency-banner rounded-lg mb-8">
+                    <i class="fas fa-exclamation-triangle mr-2"></i> PROMOÇÃO POR TEMPO LIMITADO! PREÇOS ESPECIAIS PARA HOJE!
                 </div>
                 
-                <!-- Plano 2 -->
-                <div class="bg-gray-900 rounded-xl p-8 neon-border transform hover:scale-105 transition duration-500">
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="futuristic-font text-2xl font-bold text-purple-400">PLANO PREMIUM</h3>
-                        <span class="bg-cyan-600 text-white text-xs font-bold px-3 py-1 rounded-full">2 APARELHOS</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Plano 1 -->
+                    <div class="bg-gray-900 rounded-xl p-8 neon-border transform hover:scale-[1.02] transition duration-500 relative">
+                        <div class="absolute top-0 right-0 bg-cyan-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-bold">
+                            MAIS POPULAR
+                        </div>
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="futuristic-font text-2xl font-bold text-cyan-400">PLANO BÁSICO</h3>
+                            <span class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">1 APARELHO</span>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold text-white">R$ 25,00</span>
+                            <span class="text-gray-400">/mês</span>
+                            <div class="text-sm text-green-400 mt-1">Menos de R$1 por dia!</div>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                <span>+10.000 Canais HD/4K</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                <span>+50.000 Filmes e Séries</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                <span>Zero buffering</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                <span>Suporte 24/7 via WhatsApp</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/5564999984690?text=Olá,%20quero%20assinar%20o%20Plano%20Básico%20da%20WPlay%20IPTV%20por%20R$25,00/mês" class="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-bold py-3 px-4 rounded-full transition duration-300 hover:opacity-90 glow-box pulse block text-center">
+                            <i class="fas fa-shopping-cart mr-2"></i> COMPRAR AGORA
+                        </a>
                     </div>
-                    <div class="mb-6">
-                        <span class="text-5xl font-bold text-white">R$ 30,00</span>
-                        <span class="text-gray-400">/mês</span>
+                    
+                    <!-- Plano 2 -->
+                    <div class="bg-gray-900 rounded-xl p-8 neon-border transform hover:scale-[1.02] transition duration-500 relative">
+                        <div class="absolute top-0 right-0 bg-purple-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-bold">
+                            MELHOR CUSTO-BENEFÍCIO
+                        </div>
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="futuristic-font text-2xl font-bold text-purple-400">PLANO PREMIUM</h3>
+                            <span class="bg-cyan-600 text-white text-xs font-bold px-3 py-1 rounded-full">2 APARELHOS</span>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold text-white">R$ 30,00</span>
+                            <span class="text-gray-400">/mês</span>
+                            <div class="text-sm text-green-400 mt-1">Apenas R$5 a mais por 2 telas!</div>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                <span>+10.000 Canais HD/4K</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                <span>+50.000 Filmes e Séries</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                <span>2 aparelhos simultâneos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                <span>Prioridade no suporte</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                <span>Zero buffering garantido</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/5564999984690?text=Olá,%20quero%20assinar%20o%20Plano%20Premium%20da%20WPlay%20IPTV%20por%20R$30,00/mês" class="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-4 rounded-full transition duration-300 hover:opacity-90 glow-box pulse block text-center">
+                            <i class="fas fa-shopping-cart mr-2"></i> COMPRAR AGORA
+                        </a>
                     </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                            <span>+10.000 Canais</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                            <span>+50.000 Filmes e Séries</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                            <span>Qualidade Full HD/4K</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                            <span>Suporte 24/7</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                            <span>2 Aparelhos Simultâneos</span>
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/5564999984690?text=Olá,%20tenho%20interesse%20em%20adquirir%20o%20Plano%20Premium%20da%20WPlay%20IPTV%20(2%20aparelhos)%20por%20R$30,00/mês" class="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-4 rounded-full transition duration-300 hover:opacity-90 glow-box pulse block text-center">
-                        COMPRAR AGORA
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="https://wa.me/5564999984690" class="text-cyan-400 hover:text-cyan-300 inline-flex items-center">
+                        <i class="fas fa-question-circle mr-2"></i> Precisa de mais telas? Fale conosco no WhatsApp!
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dispositivos Compatíveis Section -->
+    <section id="dispositivos" class="py-16 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="futuristic-font text-3xl md:text-4xl font-bold text-center mb-12 text-purple-400 glow-text">
+                ASSISTA EM QUALQUER <span class="text-cyan-400">DISPOSITIVO</span>
+            </h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-tv text-4xl text-cyan-400"></i>
+                    </div>
+                    <span class="font-bold">Smart TVs</span>
+                    <p class="text-sm text-gray-400 mt-1">Samsung, LG, Sony, Philips</p>
+                </div>
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-mobile-alt text-4xl text-purple-400"></i>
+                    </div>
+                    <span class="font-bold">Celulares</span>
+                    <p class="text-sm text-gray-400 mt-1">Android e iPhone</p>
+                </div>
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-tablet-alt text-4xl text-green-400"></i>
+                    </div>
+                    <span class="font-bold">Tablets</span>
+                    <p class="text-sm text-gray-400 mt-1">Android e iPad</p>
+                </div>
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-laptop text-4xl text-yellow-400"></i>
+                    </div>
+                    <span class="font-bold">Computadores</span>
+                    <p class="text-sm text-gray-400 mt-1">Windows e Mac</p>
+                </div>
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-gamepad text-4xl text-red-400"></i>
+                    </div>
+                    <span class="font-bold">Video Games</span>
+                    <p class="text-sm text-gray-400 mt-1">Xbox, PlayStation</p>
+                </div>
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-stream text-4xl text-blue-400"></i>
+                    </div>
+                    <span class="font-bold">TV Box</span>
+                    <p class="text-sm text-gray-400 mt-1">Android TV Box, Mi Box</p>
+                </div>
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-sticky-note text-4xl text-pink-400"></i>
+                    </div>
+                    <span class="font-bold">Fire TV Stick</span>
+                    <p class="text-sm text-gray-400 mt-1">Todos os modelos</p>
+                </div>
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-chromecast text-4xl text-orange-400"></i>
+                    </div>
+                    <span class="font-bold">Chromecast</span>
+                    <p class="text-sm text-gray-400 mt-1">Todos os modelos</p>
+                </div>
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-robot text-4xl text-green-500"></i>
+                    </div>
+                    <span class="font-bold">Android TV</span>
+                    <p class="text-sm text-gray-400 mt-1">TVs com sistema Android</p>
+                </div>
+                <div class="device-item text-center">
+                    <div class="bg-gray-800 rounded-lg p-4 mb-3">
+                        <i class="fas fa-desktop text-4xl text-cyan-300"></i>
+                    </div>
+                    <span class="font-bold">Outros Dispositivos</span>
+                    <p class="text-sm text-gray-400 mt-1">Qualquer navegador</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-400 mb-4">Nosso serviço funciona em praticamente TODOS os dispositivos modernos.</p>
+                <p class="text-gray-400">Configuração simples em menos de 5 minutos com nosso suporte especializado.</p>
             </div>
         </div>
     </section>
@@ -293,41 +552,41 @@
     <section id="canais" class="py-16 bg-gradient-to-b from-black to-gray-900">
         <div class="container mx-auto px-4">
             <h2 class="futuristic-font text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400 glow-text">
-                NOSSOS <span class="text-purple-400">CANAIS</span>
+                MAIS DE <span class="text-purple-400">10.000 CANAIS</span>
             </h2>
             
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <div class="channel-icon text-center">
+                <div class="channel-icon text-center" onclick="document.getElementById('allChannelsModal').style.display='block'; document.getElementById('filmes-section').scrollIntoView({behavior: 'smooth'});">
                     <div class="bg-gray-800 rounded-lg p-4 mb-2">
                         <i class="fas fa-film text-4xl text-red-500"></i>
                     </div>
                     <span class="text-sm">Filmes</span>
                 </div>
-                <div class="channel-icon text-center">
+                <div class="channel-icon text-center" onclick="document.getElementById('allChannelsModal').style.display='block'; document.getElementById('esportes-section').scrollIntoView({behavior: 'smooth'});">
                     <div class="bg-gray-800 rounded-lg p-4 mb-2">
                         <i class="fas fa-futbol text-4xl text-green-500"></i>
                     </div>
                     <span class="text-sm">Esportes</span>
                 </div>
-                <div class="channel-icon text-center">
+                <div class="channel-icon text-center" onclick="document.getElementById('allChannelsModal').style.display='block'; document.getElementById('musica-section').scrollIntoView({behavior: 'smooth'});">
                     <div class="bg-gray-800 rounded-lg p-4 mb-2">
                         <i class="fas fa-music text-4xl text-yellow-500"></i>
                     </div>
                     <span class="text-sm">Música</span>
                 </div>
-                <div class="channel-icon text-center">
+                <div class="channel-icon text-center" onclick="document.getElementById('allChannelsModal').style.display='block'; document.getElementById('infantil-section').scrollIntoView({behavior: 'smooth'});">
                     <div class="bg-gray-800 rounded-lg p-4 mb-2">
                         <i class="fas fa-child text-4xl text-blue-400"></i>
                     </div>
                     <span class="text-sm">Infantil</span>
                 </div>
-                <div class="channel-icon text-center">
+                <div class="channel-icon text-center" onclick="document.getElementById('allChannelsModal').style.display='block'; document.getElementById('documentarios-section').scrollIntoView({behavior: 'smooth'});">
                     <div class="bg-gray-800 rounded-lg p-4 mb-2">
                         <i class="fas fa-globe-americas text-4xl text-purple-500"></i>
                     </div>
                     <span class="text-sm">Documentários</span>
                 </div>
-                <div class="channel-icon text-center">
+                <div class="channel-icon text-center" onclick="document.getElementById('allChannelsModal').style.display='block'; document.getElementById('noticias-section').scrollIntoView({behavior: 'smooth'});">
                     <div class="bg-gray-800 rounded-lg p-4 mb-2">
                         <i class="fas fa-newspaper text-4xl text-orange-500"></i>
                     </div>
@@ -343,73 +602,102 @@
         </div>
     </section>
     
+    <!-- Depoimentos Section -->
+    <section class="py-16 bg-black bg-opacity-70">
+        <div class="container mx-auto px-4">
+            <h2 class="futuristic-font text-3xl md:text-4xl font-bold text-center mb-12 text-purple-400 glow-text">
+                O QUE NOSSOS <span class="text-cyan-400">CLIENTES</span> DIZEM
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Finalmente cancelei minha TV a cabo! A WPlay tem todos os canais que eu assistia e muito mais, por uma fração do preço. Recomendo demais!"</p>
+                    <div class="font-bold text-cyan-400">- Carlos S., São Paulo</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"O suporte é incrível! Me ajudaram a configurar na minha TV e no celular em minutos. A qualidade da imagem é perfeita, sem travamentos."</p>
+                    <div class="font-bold text-purple-400">- Ana L., Rio de Janeiro</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Economizo mais de R$200 por mês desde que assinei. Tenho todos os canais de esporte que quero e ainda uma biblioteca enorme de filmes."</p>
+                    <div class="font-bold text-green-400">- Roberto M., Minas Gerais</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Contato Section -->
     <section id="contato" class="py-16 bg-black bg-opacity-70">
         <div class="container mx-auto px-4">
-            <h2 class="futuristic-font text-3xl md:text-4xl font-bold text-center mb-12 text-purple-400 glow-text">
-                FALE COM <span class="text-cyan-400">LINCOLN SILVA</span>
+            <h2 class="futuristic-font text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400 glow-text">
+                PRECISA DE <span class="text-purple-400">AJUDA</span>?
             </h2>
             
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-900 rounded-xl p-8 neon-border">
-                    <h3 class="futuristic-font text-2xl font-bold text-cyan-400 mb-6">INFORMAÇÕES DE CONTATO</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-cyan-600 bg-opacity-20 p-3 rounded-full mr-4">
-                                <i class="fas fa-phone-alt text-cyan-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-300">TELEFONE/WHATSAPP</h4>
-                                <a href="https://wa.me/5564999984690" class="text-cyan-400 hover:text-cyan-300 transition duration-300">64 99998-4690</a>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-purple-600 bg-opacity-20 p-3 rounded-full mr-4">
-                                <i class="fas fa-user-tie text-purple-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-300">VENDEDOR</h4>
-                                <p class="text-gray-400">Lincoln Silva</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-green-600 bg-opacity-20 p-3 rounded-full mr-4">
-                                <i class="fas fa-clock text-green-400"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-300">ATENDIMENTO</h4>
-                                <p class="text-gray-400">24 horas por dia, 7 dias por semana</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="max-w-2xl mx-auto bg-gray-900 rounded-xl p-8 neon-border text-center">
+                <h3 class="futuristic-font text-2xl font-bold text-purple-400 mb-6">FALE COM NOSSO SUPORTE</h3>
+                
+                <p class="mb-8">Nosso time está disponível 24 horas por dia, 7 dias por semana para tirar suas dúvidas e ajudar na instalação.</p>
+                
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="https://wa.me/5564999984690" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 glow-box">
+                        <i class="fab fa-whatsapp mr-2"></i> WHATSAPP
+                    </a>
+                    <a href="tel:+5564999984690" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-phone-alt mr-2"></i> LIGAR AGORA
+                    </a>
                 </div>
                 
-                <div class="bg-gray-900 rounded-xl p-8 neon-border">
-                    <h3 class="futuristic-font text-2xl font-bold text-purple-400 mb-6">ENVIE UMA MENSAGEM</h3>
-                    
-                    <form class="space-y-4">
-                        <div>
-                            <label class="block text-gray-400 mb-2">Seu Nome</label>
-                            <input type="text" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition duration-300">
+                <div class="mt-8 text-sm text-gray-400">
+                    <p>Resposta em menos de 5 minutos durante o horário comercial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Garantia Section -->
+    <section class="py-16 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gray-900 rounded-xl p-8 neon-border">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 text-center mb-6 md:mb-0">
+                        <div class="inline-block bg-green-900 bg-opacity-30 p-6 rounded-full">
+                            <i class="fas fa-shield-alt text-5xl text-green-400"></i>
                         </div>
-                        
-                        <div>
-                            <label class="block text-gray-400 mb-2">Seu WhatsApp</label>
-                            <input type="text" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition duration-300">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-gray-400 mb-2">Mensagem</label>
-                            <textarea class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition duration-300" rows="4"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-bold py-3 px-4 rounded-full transition duration-300 hover:opacity-90 glow-box">
-                            ENVIAR MENSAGEM
-                        </button>
-                    </form>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="futuristic-font text-2xl font-bold text-cyan-400 mb-4">GARANTIA WPLAY</h3>
+                        <p class="mb-4">Se em 7 dias você não estiver completamente satisfeito com nosso serviço, devolvemos seu dinheiro sem questionamentos.</p>
+                        <p>Oferecemos essa garantia porque temos certeza da qualidade do nosso serviço e queremos que você experimente sem medo.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -427,7 +715,7 @@
                 </div>
                 
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">
+                    <a href="https://wa.me/5564999984690" class="text-gray-400 hover:text-green-400 transition duration-300">
                         <i class="fab fa-whatsapp text-xl"></i>
                     </a>
                     <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">
@@ -451,13 +739,18 @@
         <i class="fab fa-whatsapp"></i>
     </a>
     
+    <!-- Floating Buy Button -->
+    <a href="#planos" class="fixed bottom-24 right-6 bg-cyan-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transform hover:scale-110 transition duration-300 z-50 pulse">
+        <i class="fas fa-shopping-cart"></i>
+    </a>
+    
     <!-- Modal for All Channels -->
     <div id="allChannelsModal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2 class="futuristic-font text-3xl text-cyan-400 mb-6 text-center">TODOS OS CANAIS E CONTEÚDOS</h2>
             
-            <div class="category-title">CANAIS DE FILMES</div>
+            <div id="filmes-section" class="category-title">CANAIS DE FILMES</div>
             <div class="channel-list">
                 <div class="channel-item">HBO</div>
                 <div class="channel-item">HBO 2</div>
@@ -486,7 +779,7 @@
                 <div class="channel-item">Telecine Cult</div>
             </div>
             
-            <div class="category-title">CANAIS DE ESPORTES</div>
+            <div id="esportes-section" class="category-title">CANAIS DE ESPORTES</div>
             <div class="channel-list">
                 <div class="channel-item">ESPN</div>
                 <div class="channel-item">ESPN 2</div>
@@ -512,7 +805,7 @@
                 <div class="channel-item">UFC Fight Pass</div>
             </div>
             
-            <div class="category-title">CANAIS INFANTIS</div>
+            <div id="infantil-section" class="category-title">CANAIS INFANTIS</div>
             <div class="channel-list">
                 <div class="channel-item">Cartoon Network</div>
                 <div class="channel-item">Disney Channel</div>
@@ -528,7 +821,7 @@
                 <div class="channel-item">Tooncast</div>
             </div>
             
-            <div class="category-title">CANAIS DE NOTÍCIAS</div>
+            <div id="noticias-section" class="category-title">CANAIS DE NOTÍCIAS</div>
             <div class="channel-list">
                 <div class="channel-item">GloboNews</div>
                 <div class="channel-item">CNN Brasil</div>
@@ -542,7 +835,7 @@
                 <div class="channel-item">RT</div>
             </div>
             
-            <div class="category-title">CANAIS DE DOCUMENTÁRIOS</div>
+            <div id="documentarios-section" class="category-title">CANAIS DE DOCUMENTÁRIOS</div>
             <div class="channel-list">
                 <div class="channel-item">Discovery Channel</div>
                 <div class="channel-item">Discovery Turbo</div>
@@ -560,7 +853,7 @@
                 <div class="channel-item">TLC</div>
             </div>
             
-            <div class="category-title">CANAIS DE MÚSICA</div>
+            <div id="musica-section" class="category-title">CANAIS DE MÚSICA</div>
             <div class="channel-list">
                 <div class="channel-item">MTV</div>
                 <div class="channel-item">MTV Live</div>
@@ -689,8 +982,19 @@
             }
         }
         
-        // Mobile menu toggle would go here
-        // This is just a placeholder for the actual implementation
+        // Countdown timer for urgency
+        function updateCountdown() {
+            const now = new Date();
+            const hours = 23 - now.getHours();
+            const minutes = 59 - now.getMinutes();
+            const seconds = 59 - now.getSeconds();
+            
+            document.querySelector('.urgency-banner').innerHTML = 
+                `⚡ PROMOÇÃO RELÂMPAGO! APENAS ${hours}h ${minutes}m ${seconds}s PARA GARANTIR O DESCONTO! ⚡`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 </body>
 </html>
